@@ -1,0 +1,48 @@
+document.addEventListener("DOMContentLoaded", () => {
+    // Optional: sticky nav color change (guarded so it doesn't break if .nav-cont is absent)
+    const nav = document.querySelector(".nav-cont");
+    if (nav) {
+      window.addEventListener("scroll", () => {
+        if (window.scrollY > 50) nav.classList.add("scrolled");
+        else nav.classList.remove("scrolled");
+      });
+    }
+
+    const roles = ["Frontend Developer", "Freelancer"];
+    const roleEl = document.getElementById("role");
+    if (!roleEl) return; // safety: do nothing if #role isn't in the DOM
+
+    let index = 0;          // which word
+    let charIndex = 0;      // character pointer
+    let isDeleting = false; // typing or deleting?
+
+    const typeSpeed = 150;          // ms per letter (typing)
+    const deleteSpeed = 100;        // ms per letter (deleting)
+    const pauseBeforeDelete = 2000; // ms to wait after full word
+    const pauseAfterDelete  = 500;  // ms before typing next word
+
+    function tick() {
+      const text = roles[index];
+
+      if (!isDeleting) {
+        roleEl.textContent = text.substring(0, ++charIndex); // pre-increment fixes off-by-one
+        if (charIndex === text.length) {
+          isDeleting = true;
+          setTimeout(tick, pauseBeforeDelete); // ✅ wait 2s with full word visible
+          return;
+        }
+        setTimeout(tick, typeSpeed);
+      } else {
+        roleEl.textContent = text.substring(0, --charIndex); // pre-decrement, no overshoot
+        if (charIndex === 0) {
+          isDeleting = false;
+          index = (index + 1) % roles.length;
+          setTimeout(tick, pauseAfterDelete); // small breather before next word
+          return;
+        }
+        setTimeout(tick, deleteSpeed);
+      }
+    }
+
+    tick();
+  });
