@@ -16,11 +16,11 @@
     <div class="nav-cont">
         <div class="container">
             <nav class="nav-sec d-flex justify-content-between align-items-center">
-                <div class="col-2">
+                <div class="col-4 col-sm-3 col-md-2">
                     <a href="/"><img src="./images/logo.png" class="img-fluid" width="40%" alt="LOGO"></a>
                 </div>
-                <div class="col-8">
-                    <div class="nav-menu d-flex justify-content-center align-items-center gap-4">
+                <div class="nav-menu justify-content-center col-6 col-sm-7 col-md-8">
+                    <div class="d-flex gap-4">
                         <a href="#home">Home</a>
                         <a href="#services">Services</a>
                         <a href="#about">About me</a>
@@ -28,19 +28,37 @@
                         <a href="#contact">Contact me</a>
                     </div>
                 </div>
-                <div class="col-2 d-flex justify-content-end">
-                    <a href="./images/Prashant_Resume.pdf" download="Prashant-Kumar-CV">
-                        <button>Download C.V.</button>
-                    </a>
+                <!-- Right side of navbar -->
+                <div class="col-3 col-sm-2 col-md-2 d-flex justify-content-end align-items-center">
+                    <div class="cv-download">
+                        <a href="./images/Prashant_Resume.pdf" download="Prashant-Kumar-CV">
+                            <button class="btn btn-warning btn-sm text-nowrap">Download C.V.</button>
+                        </a>
+                    </div>
                 </div>
+
+                <div class="col-1 col-sm-1 col-md-1 d-flex justify-content-end align-items-center">
+                    <div class="hamburger">
+                        <i class="fa-solid fa-bars"></i>
+                    </div>
+                </div>
+
+
             </nav>
+            <div class="mobile-menu" id="mobileMenu">
+                <a href="#home">Home</a>
+                <a href="#services">Services</a>
+                <a href="#about">About me</a>
+                <a href="#portfolio">Portfolio</a>
+                <a href="#contact">Contact me</a>
+            </div>
         </div>
     </div>
 
     <div class="container">
-        <header class="hero-sec d-flex justify-content-between mb-5" id="home">
-            <div class="col-5 content-area mt-5">
-                <div class="name-cont mt-5 pt-4 mb-4">
+        <header class="hero-sec row justify-content-between mb-lg-5" id="home">
+            <div class="col-12 col-md-6 content-area mt-0 mt-lg-5">
+                <div class="name-cont pt-lg-4 mt-0 mt-lg-5">
                     <p class="salutation">Hi I am</p>
                     <p class="p-name">Prashant Kumar</p>
                     <h1 class="designation Frontend" id="role"></h1>
@@ -48,10 +66,10 @@
                 </div>
 
 
-                <div class="social-media">
+                <div class="social-media mt-4">
                     <a href="https://github.com/Prashantsingh74">
                         <i class="fa-brands fa-2x fa-github text-white"></i>
-                    </a>&nbsp;&nbsp;&nbsp; 
+                    </a>&nbsp;&nbsp;&nbsp;
                     <a href="https://www.linkedin.com/in/prashant-kumar-bb3892265/">
                         <i class="fa-brands fa-2x fa-linkedin text-white"></i>
                     </a>
@@ -61,92 +79,91 @@
                     <button class="mt-5 mb-5">Download CV</button>
                 </a>
 
-                <div class="experience-sec d-flex p-3 rounded-2 justify-content-between">
-                    <div class="d-grid gap-2">
-                        <span>1+</span>
-                        <p>Years of Experience</p>
+                <div class="experience-sec row text-center p-3 rounded-2">
+                    <div class="col-4 col-sm-4 gap-2 d-grid">
+                        <span class="fw-bold text-orange">1+</span>
+                        <p class="mb-0">Years of Experience</p>
                     </div>
-                    <div class="line"></div>
-                    <div class="d-grid gap-2">
-                        <span>5+</span>
-                        <p>Project Completed</p>
+
+                    <div
+                        class="col-4 col-sm-4 gap-2 d-grid border-start border-end border-0 border-sm-start border-sm-end">
+                        <span class="fw-bold text-orange">5+</span>
+                        <p class="mb-0">Project Completed</p>
                     </div>
-                    <div class="line"></div>
-                    <div class="d-grid gap-2">
-                        <span>20+</span>
-                        <p>Happy Clients</p>
+
+                    <div class="col-4 gap-2 d-grid col-sm-4">
+                        <span class="fw-bold text-orange">20+</span>
+                        <p class="mb-0">Happy Clients</p>
                     </div>
                 </div>
 
+
             </div>
-            <div class="col-6 d-flex image-container justify-content-end">
-                <img src="./images/profile-img-con.png" class="img-fluid" width="55%" height="auto" alt="profile-img">
-                <div class="image-blur"></div>
+            <div class="col-12 col-lg-6 d-flex justify-content-center justify-content-lg-end">
+                <div class="image-container position-relative" style="max-width: 350px; width: 100%;">
+                    <img src="./images/profile-img-con.png" class="img-fluid rounded-3" alt="profile-img">
+                    <div class="image-blur"></div>
+                </div>
             </div>
+
         </header>
 
-        <section class="services py-5" id="services">
+        <section class="services pb-5" id="services">
             <div class="text-center mb-5">
                 <h2>Services</h2>
                 <p>I build responsive, user-friendly, and efficient web solutions tailored to modern needs.</p>
             </div>
-            <div class="row row-cols-1 row-cols-md-3 g-4">
+            <div class="row row-cols-1 row-cols-md-2 row-cols-lg-3 g-4">
                 <div class="col">
-                    <div class="card p-3">
-                        <img src="./images/user-icon.png" class="img-fluid align-self-center mb-2" width="50px"
-                            alt="services">
-                        <h5 class="services-name text-center mb-4">Web Development</h5>
-                        <p class="services-desc text-center">I develop responsive and user-friendly websites using
+                    <div class="card text-center p-3">
+                        <i class="fas fa-code fa-2x text-orange mb-3"></i>
+                        <h5 class="services-name mb-4">Web Development</h5>
+                        <p class="services-desc">I develop responsive and user-friendly websites using
                             modern technologies like HTML5, CSS3, JavaScript, and React. My focus is on clean code,
                             performance, and cross-browser compatibility to deliver seamless user experiences.</p>
                     </div>
                 </div>
                 <div class="col">
-                    <div class="card p-3">
-                        <img src="./images/user-icon.png" class="img-fluid align-self-center mb-2" width="50px"
-                            alt="services">
-                        <h5 class="services-name text-center mb-4">Front-End Development</h5>
-                        <p class="services-desc text-center">Skilled in React.js, Bootstrap, and Tailwind CSS, I
+                    <div class="card text-center p-3">
+                        <i class="fas fa-laptop-code fa-2x text-orange mb-3"></i>
+                        <h5 class="services-name mb-4">Front-End Development</h5>
+                        <p class="services-desc">Skilled in React.js, Bootstrap, and Tailwind CSS, I
                             specialize in building intuitive, pixel-perfect interfaces that bring designs to life with
                             speed, precision, and interactivity.</p>
                     </div>
                 </div>
                 <div class="col">
-                    <div class="card p-3">
-                        <img src="./images/user-icon.png" class="img-fluid align-self-center mb-2" width="50px"
-                            alt="services">
-                        <h5 class="services-name text-center mb-4">WordPress Development</h5>
-                        <p class="services-desc text-center">From custom themes to WooCommerce stores, I build and
+                    <div class="card text-center p-3">
+                        <i class="fab fa-wordpress fa-2x text-orange mb-3"></i>
+                        <h5 class="services-name mb-4">WordPress Development</h5>
+                        <p class="services-desc">From custom themes to WooCommerce stores, I build and
                             optimize WordPress websites using Elementor, plugins, and SEO best practices to create
                             scalable and easy-to-manage solutions.</p>
                     </div>
                 </div>
                 <div class="col">
-                    <div class="card p-3">
-                        <img src="./images/user-icon.png" class="img-fluid align-self-center mb-2" width="50px"
-                            alt="services">
-                        <h5 class="services-name text-center mb-4">E-Commerce Solutions</h5>
-                        <p class="services-desc text-center">I design and develop secure and mobile-friendly e-commerce
+                    <div class="card text-center p-3">
+                        <i class="fas fa-shopping-cart fa-2x text-orange mb-3"></i>
+                        <h5 class="services-name mb-4">E-Commerce Solutions</h5>
+                        <p class="services-desc">I design and develop secure and mobile-friendly e-commerce
                             websites that drive engagement and sales. My experience includes integrating WooCommerce,
                             optimizing performance, and improving customer experience.</p>
                     </div>
                 </div>
                 <div class="col">
-                    <div class="card p-3">
-                        <img src="./images/user-icon.png" class="img-fluid align-self-center mb-2" width="50px"
-                            alt="services">
-                        <h5 class="services-name text-center mb-4">Performance Optimization & SEO</h5>
-                        <p class="services-desc text-center">I help websites load faster, rank higher, and perform
+                    <div class="card text-center p-3">
+                        <i class="fas fa-chart-line fa-2x text-orange mb-3"></i>
+                        <h5 class="services-name mb-4">Performance Optimization & SEO</h5>
+                        <p class="services-desc">I help websites load faster, rank higher, and perform
                             better through optimization techniques, responsive layouts, and SEO strategies tailored to
                             your business needs.</p>
                     </div>
                 </div>
                 <div class="col">
-                    <div class="card p-3">
-                        <img src="./images/user-icon.png" class="img-fluid align-self-center mb-2" width="50px"
-                            alt="services">
-                        <h5 class="services-name text-center mb-4">UI/UX Implementation</h5>
-                        <p class="services-desc text-center">I turn wireframes and design prototypes into fully
+                    <div class="card text-center p-3">
+                        <i class="fas fa-pencil-ruler fa-2x text-orange mb-3"></i>
+                        <h5 class="services-name mb-4">UI/UX Implementation</h5>
+                        <p class="services-desc">I turn wireframes and design prototypes into fully
                             functional, responsive interfaces. With a focus on accessibility, consistency, and
                             performance, I ensure users have a smooth and engaging experience across all devices.</p>
                     </div>
@@ -155,33 +172,46 @@
 
         </section>
 
-        <section class="services about p-5" id="about">
-            <div class="text-center mb-5">
+        <section class="services about py-lg-5" id="about">
+            <div class="text-center mb-lg-5">
                 <h2>About Me</h2>
-                <p>Passionate Front-End Developer creating responsive, user-friendly websites with clean code and performance.</p>
+                <p>Passionate Front-End Developer creating responsive, user-friendly websites with clean code and
+                    performance.</p>
             </div>
-            <div class="d-flex image-container justify-content-between">
-                <div class="col-5">
-                    <img src="./images/about.png" class="img-fluid" alt="">
-                    <div class="image-blurs"></div>
+            <div class="row justify-content-between">
+                <div class="col-12 col-lg-6 d-flex justify-content-center">
+                    <div class="image-container" style="max-width: 450px; width: 100%;">
+                        <img src="./images/about.png" class="rounded-3" alt="profile-img">
+                        <div class="image-blur"></div>
+                    </div>
                 </div>
-                <div class="col-6 mt-5 pt-4">
-                    <p class="about-desc">I am a passionate Front-End Developer with over a year of hands-on experience in crafting responsive, user-friendly, and performance-driven websites. My expertise spans JavaScript, React.js, HTML5, CSS3, Bootstrap, Tailwind CSS, and WordPress, enabling me to build clean and functional digital solutions. I have worked on diverse projects, including corporate websites, healthcare platforms, e-commerce stores, and CRM dashboards, where I focused on enhancing usability, optimizing performance, and ensuring cross-browser compatibility.
 
-I enjoy transforming ideas into reality, writing clean code, and creating interfaces that balance design with functionality. Debugging and problem-solving are challenges I embrace, as they push me to refine my skills and deliver better results. Beyond coding, I stay curious and continuously learn new technologies to keep pace with the evolving digital world. For me, development is not just about building websites, but about shaping experiences that leave a lasting impact.
+                <div class="col-12 col-lg-6 mt-lg-5 pt-lg-4">
+                    <p class="about-desc">I am a passionate Front-End Developer with over a year of hands-on experience
+                        in crafting responsive, user-friendly, and performance-driven websites. My expertise spans
+                        JavaScript, React.js, HTML5, CSS3, Bootstrap, Tailwind CSS, and WordPress, enabling me to build
+                        clean and functional digital solutions. I have worked on diverse projects, including corporate
+                        websites, healthcare platforms, e-commerce stores, and CRM dashboards, where I focused on
+                        enhancing usability, optimizing performance, and ensuring cross-browser compatibility.
+
+                        I enjoy transforming ideas into reality, writing clean code, and creating interfaces that
+                        balance design with functionality. Debugging and problem-solving are challenges I embrace, as
+                        they push me to refine my skills and deliver better results. Beyond coding, I stay curious and
+                        continuously learn new technologies to keep pace with the evolving digital world. For me,
+                        development is not just about building websites, but about shaping experiences that leave a
+                        lasting impact.
                     </p>
-                    <button class="mt-4">Contact Me</button>
+                    <a href="#contact"><button class="mt-4">Contact Me</button></a>
                 </div>
             </div>
         </section>
 
-        <section class="services py-5 mb-5" id="portfolio">
+        <section class="services portfolio py-5 mb-5" id="portfolio">
             <div class="text-center mb-3">
                 <h2 class="fw-bold">Portfolio</h2>
                 <p class="text-muted">Some of my recent works and case studies.</p>
             </div>
-
-            <div class="row row-cols-1 row-cols-md-3 g-4">
+            <div class="row row-cols-1 row-cols-md-2 row-cols-lg-3 g-4">
                 <!-- Project Card -->
                 <div class="col">
                     <div class="card project-card border-0 shadow-sm">
@@ -240,11 +270,11 @@ I enjoy transforming ideas into reality, writing clean code, and creating interf
         <div class="col-10 footerlogo pt-3">
             <img src="./images/logo.png" class="img-fluid foo-img" width="15%" alt="footer-logo">
             <div class="footer-menu d-flex justify-content-center my-3">
-                <a href="/">Home</a>
-                <a href="#">Services</a>
-                <a href="#">About me</a>
-                <a href="#">Portfolio</a>
-                <a href="#">Contact me</a>
+                <a href="#home">Home</a>
+                <a href="#services">Services</a>
+                <a href="#about">About me</a>
+                <a href="#portfolio">Portfolio</a>
+                <a href="#contact">Contact me</a>
             </div>
 
             <div class="social-media d-flex justify-content-center mb-2">
