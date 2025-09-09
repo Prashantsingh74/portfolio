@@ -284,8 +284,16 @@ button {
   flex-direction: column;
 }
 
+.foo-img-header {
+  align-self: center;
+  max-width: 100px;
+  height: auto;
+}
+
 .foo-img {
   align-self: center;
+  max-width: 100px;
+  height: auto;
 }
 
 .footer-menu a {
@@ -309,6 +317,7 @@ button {
 
 .info {
   color: #ccc;
+  font-size: 12px;
 }
 
 .designation {
@@ -428,6 +437,9 @@ button {
 .experience-sec p {
   font-weight: 300;
   font-size: 13px;
+}
+.foo-img-header {
+  max-width: 80px;
 }
 }
 

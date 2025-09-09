@@ -17,7 +17,7 @@
         <div class="container">
             <nav class="nav-sec d-flex justify-content-between align-items-center">
                 <div class="col-4 col-sm-3 col-md-2">
-                    <a href="/"><img src="./images/logo.png" class="img-fluid" width="40%" alt="LOGO"></a>
+                    <a href="/"><img src="./images/logo.png" class="foo-img-header" alt="LOGO"></a>
                 </div>
                 <div class="nav-menu justify-content-center col-6 col-sm-7 col-md-8">
                     <div class="d-flex gap-4">
@@ -31,9 +31,10 @@
                 <!-- Right side of navbar -->
                 <div class="col-3 col-sm-2 col-md-2 d-flex justify-content-end align-items-center">
                     <div class="cv-download">
-                        <a href="./images/Prashant_Resume.pdf" download="Prashant-Kumar-CV">
+                        <!-- <a href="./images/Prashant_Resume.pdf" download="Prashant-Kumar-CV">
                             <button class="btn btn-warning btn-sm text-nowrap">Download C.V.</button>
-                        </a>
+                        </a> -->
+                        <button class="btn btn-sm text-nowrap" onclick="showContact()">Download CV</button>
                     </div>
                 </div>
 
@@ -75,9 +76,11 @@
                     </a>
                 </div>
 
-                <a href="./images/Prashant_Resume.pdf" download="Prashant-Kumar-CV">
+                <!-- <a href="./images/Prashant_Resume.pdf" download="Prashant-Kumar-CV">
                     <button class="mt-5 mb-5">Download CV</button>
-                </a>
+                </a> -->
+
+                <button class="mt-5 mb-5" onclick="showContact()">Download CV</button>
 
                 <div class="experience-sec row text-center p-3 rounded-2">
                     <div class="col-4 col-sm-4 gap-2 d-grid">
@@ -186,7 +189,7 @@
                     </div>
                 </div>
 
-                <div class="col-12 col-lg-6 mt-lg-5 pt-lg-4">
+                <div class="col-12 col-lg-6 mt-lg-5 px-3 pt-lg-4">
                     <p class="about-desc">I am a passionate Front-End Developer with over a year of hands-on experience
                         in crafting responsive, user-friendly, and performance-driven websites. My expertise spans
                         JavaScript, React.js, HTML5, CSS3, Bootstrap, Tailwind CSS, and WordPress, enabling me to build
@@ -268,7 +271,7 @@
 
     <footer class="footer-sec" id="contact">
         <div class="col-10 footerlogo pt-3">
-            <img src="./images/logo.png" class="img-fluid foo-img" width="15%" alt="footer-logo">
+            <img src="./images/logo.png" class="foo-img" alt="footer-logo">
             <div class="footer-menu d-flex justify-content-center my-3">
                 <a href="#home">Home</a>
                 <a href="#services">Services</a>
