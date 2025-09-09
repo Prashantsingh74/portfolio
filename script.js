@@ -66,3 +66,7 @@ document.addEventListener("DOMContentLoaded", () => {
       icon.classList.remove('fa-xmark');
     });
   });
+
+   function showContact() {
+    alert("Please contact me on (+91-8084008752 or prashant.kumar.singh1297@gmail.com) to request my CV.");
+  }
