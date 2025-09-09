@@ -394,10 +394,6 @@ button {
   .line {
     display: none;
   }
-
-  .services .row {
-    row-gap: 2rem;
-  }
 }
 
 /* Mobiles (<=576px) */
