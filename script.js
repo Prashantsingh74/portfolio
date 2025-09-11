@@ -83,7 +83,7 @@ VANTA.NET({
   scale: 1.0,
   scaleMobile: 1.0,
   backgroundAlpha: 0.0,   // 🔥 transparent background
-  color: 0xff5a1f,        // particle color (orange)
+  color: 0x007bff,        // particle color (orange)
   points: 12.0,           // number of points
   maxDistance: 25.0,      // line distance
   spacing: 20.0           // density
