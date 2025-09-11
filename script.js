@@ -72,19 +72,28 @@ function showContact() {
 }
 
 // Vanta.js background effect
-
+let isMobile = window.innerWidth <= 768; // mobile breakpoint
 
 VANTA.NET({
-  el: "#vanta-bg",
+  el: "#vanta-bg", // your header section
   mouseControls: true,
   touchControls: true,
+  gyroControls: false,
   minHeight: 200.00,
   minWidth: 200.00,
-  scale: 1.0,
-  scaleMobile: 1.0,
-  backgroundAlpha: 0.0,   // 🔥 transparent background
-  color: 0x007bff,        // particle color (orange)
-  points: 12.0,           // number of points
-  maxDistance: 25.0,      // line distance
-  spacing: 20.0           // density
+  scale: 1.00,
+  scaleMobile: 1.00,
+
+  // Particle color (blue + turquoise gradient effect)
+  color: 0x007bff,   // primary blue
+  backgroundAlpha: 0.0, // 🔥 transparent background
+
+  // Particle settings (lighter on mobile)
+  points: isMobile ? 8.0 : 15.0,
+  maxDistance: isMobile ? 12.0 : 25.0,
+  spacing: isMobile ? 20.0 : 15.0,
 })
+
+
+
+
