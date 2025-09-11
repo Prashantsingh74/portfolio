@@ -47,26 +47,44 @@ document.addEventListener("DOMContentLoaded", () => {
   tick();
 });
 // Mobile menu toggle
-  const hamburger = document.querySelector('.hamburger');
-  const mobileMenu = document.getElementById('mobileMenu');
-  const icon = hamburger.querySelector('i');
+const hamburger = document.querySelector('.hamburger');
+const mobileMenu = document.getElementById('mobileMenu');
+const icon = hamburger.querySelector('i');
 
-  // Toggle menu
-  hamburger.addEventListener('click', () => {
-    mobileMenu.style.display = mobileMenu.style.display === 'flex' ? 'none' : 'flex';
-    icon.classList.toggle('fa-bars');
-    icon.classList.toggle('fa-xmark');
+// Toggle menu
+hamburger.addEventListener('click', () => {
+  mobileMenu.style.display = mobileMenu.style.display === 'flex' ? 'none' : 'flex';
+  icon.classList.toggle('fa-bars');
+  icon.classList.toggle('fa-xmark');
+});
+
+// Close menu when clicking a link
+document.querySelectorAll('.mobile-menu a').forEach(link => {
+  link.addEventListener('click', () => {
+    mobileMenu.style.display = 'none';
+    icon.classList.add('fa-bars');
+    icon.classList.remove('fa-xmark');
   });
+});
 
-  // Close menu when clicking a link
-  document.querySelectorAll('.mobile-menu a').forEach(link => {
-    link.addEventListener('click', () => {
-      mobileMenu.style.display = 'none';
-      icon.classList.add('fa-bars');
-      icon.classList.remove('fa-xmark');
-    });
-  });
+function showContact() {
+  alert("Please contact me on (+91-8084008752 or prashant.kumar.singh1297@gmail.com) to request my CV.");
+}
 
-   function showContact() {
-    alert("Please contact me on (+91-8084008752 or prashant.kumar.singh1297@gmail.com) to request my CV.");
-  }
+// Vanta.js background effect
+
+
+VANTA.NET({
+  el: "#vanta-bg",
+  mouseControls: true,
+  touchControls: true,
+  minHeight: 200.00,
+  minWidth: 200.00,
+  scale: 1.0,
+  scaleMobile: 1.0,
+  backgroundAlpha: 0.0,   // 🔥 transparent background
+  color: 0xff5a1f,        // particle color (orange)
+  points: 12.0,           // number of points
+  maxDistance: 25.0,      // line distance
+  spacing: 20.0           // density
+})

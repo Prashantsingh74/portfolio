@@ -10,6 +10,8 @@
     <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" rel="stylesheet">
     <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap"
         rel="stylesheet">
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/three.js/r121/three.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/vanta/dist/vanta.net.min.js"></script>
 </head>
 
 <body class="bg-dark">
@@ -55,17 +57,20 @@
             </div>
         </div>
     </div>
-
+    <div id="vanta-bg" class="vanta-background"></div>
     <div class="container">
-        <header class="hero-sec row justify-content-between mb-lg-5" id="home">
+        <header class="hero-sec row justify-content-between mb-lg-5 position-relative" id="home">
+
+            <!-- Particle background -->
+
+
+            <!-- Left Content -->
             <div class="col-12 col-md-6 content-area mt-2 mt-lg-5">
                 <div class="name-cont pt-lg-4 mt-0 mt-lg-5">
                     <p class="salutation">Hi I am</p>
                     <p class="p-name">Prashant Kumar</p>
                     <h1 class="designation Frontend" id="role"></h1>
-
                 </div>
-
 
                 <div class="social-media mt-4">
                     <a href="https://github.com/Prashantsingh74">
@@ -75,10 +80,6 @@
                         <i class="fa-brands fa-2x fa-linkedin text-white"></i>
                     </a>
                 </div>
-
-                <!-- <a href="./images/Prashant_Resume.pdf" download="Prashant-Kumar-CV">
-                    <button class="mt-5 mb-5">Download CV</button>
-                </a> -->
 
                 <button class="mt-5 mb-5" onclick="showContact()">Download CV</button>
 
@@ -99,17 +100,18 @@
                         <p class="mb-0">Happy Clients</p>
                     </div>
                 </div>
-
-
             </div>
-            <div class="col-12 col-lg-6 d-flex justify-content-center justify-content-lg-end">
+
+            <!-- Right Image -->
+            <div class="col-12 col-lg-6 d-none d-lg-flex justify-content-lg-end">
                 <div class="image-container position-relative" style="max-width: 350px; width: 100%;">
                     <img src="./images/profile-img-con.png" class="img-fluid rounded-3" alt="profile-img">
                     <div class="image-blur"></div>
                 </div>
             </div>
-
         </header>
+
+
 
         <section class="services pb-5" id="services">
             <div class="text-center mb-5">
@@ -204,7 +206,7 @@
                         development is not just about building websites, but about shaping experiences that leave a
                         lasting impact.
                     </p>
-                    <a href="#contact"><button class="mt-4">Contact Me</button></a>
+                    <a href="#contact" class="contact-me"><button class="mt-2 mt-md-4">Contact Me</button></a>
                 </div>
             </div>
         </section>
