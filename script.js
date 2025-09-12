@@ -90,7 +90,7 @@ VANTA.NET({
 
   // Particle settings (lighter on mobile)
   points: isMobile ? 8.0 : 15.0,
-  maxDistance: isMobile ? 12.0 : 25.0,
+  maxDistance: isMobile ? 10.0 : 20.0,
   spacing: isMobile ? 20.0 : 15.0,
 })
 
