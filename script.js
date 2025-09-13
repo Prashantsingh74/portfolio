@@ -1,5 +1,4 @@
 document.addEventListener("DOMContentLoaded", () => {
-  // Optional: sticky nav color change (guarded so it doesn't break if .nav-cont is absent)
   const nav = document.querySelector(".nav-cont");
   if (nav) {
     window.addEventListener("scroll", () => {
@@ -10,34 +9,34 @@ document.addEventListener("DOMContentLoaded", () => {
 
   const roles = ["Frontend Developer", "Freelancer"];
   const roleEl = document.getElementById("role");
-  if (!roleEl) return; // safety: do nothing if #role isn't in the DOM
+  if (!roleEl) return;
 
-  let index = 0;          // which word
-  let charIndex = 0;      // character pointer
-  let isDeleting = false; // typing or deleting?
+  let index = 0;
+  let charIndex = 0;
+  let isDeleting = false;
 
-  const typeSpeed = 150;          // ms per letter (typing)
-  const deleteSpeed = 100;        // ms per letter (deleting)
-  const pauseBeforeDelete = 2000; // ms to wait after full word
-  const pauseAfterDelete = 500;  // ms before typing next word
+  const typeSpeed = 150;
+  const deleteSpeed = 100;
+  const pauseBeforeDelete = 2000;
+  const pauseAfterDelete = 500;
 
   function tick() {
     const text = roles[index];
 
     if (!isDeleting) {
-      roleEl.textContent = text.substring(0, ++charIndex); // pre-increment fixes off-by-one
+      roleEl.textContent = text.substring(0, ++charIndex);
       if (charIndex === text.length) {
         isDeleting = true;
-        setTimeout(tick, pauseBeforeDelete); // ✅ wait 2s with full word visible
+        setTimeout(tick, pauseBeforeDelete);
         return;
       }
       setTimeout(tick, typeSpeed);
     } else {
-      roleEl.textContent = text.substring(0, --charIndex); // pre-decrement, no overshoot
+      roleEl.textContent = text.substring(0, --charIndex);
       if (charIndex === 0) {
         isDeleting = false;
         index = (index + 1) % roles.length;
-        setTimeout(tick, pauseAfterDelete); // small breather before next word
+        setTimeout(tick, pauseAfterDelete);
         return;
       }
       setTimeout(tick, deleteSpeed);
@@ -72,10 +71,10 @@ function showContact() {
 }
 
 // Vanta.js background effect
-let isMobile = window.innerWidth <= 768; // mobile breakpoint
+let isMobile = window.innerWidth <= 768;
 
 VANTA.NET({
-  el: "#vanta-bg", // your header section
+  el: "#vanta-bg",
   mouseControls: true,
   touchControls: true,
   gyroControls: false,
@@ -83,17 +82,9 @@ VANTA.NET({
   minWidth: 200.00,
   scale: 1.00,
   scaleMobile: 1.00,
-
-  // Particle color (blue + turquoise gradient effect)
-  color: 0x007bff,   // primary blue
-  backgroundAlpha: 0.0, // 🔥 transparent background
-
-  // Particle settings (lighter on mobile)
+  color: 0x007bff,
+  backgroundAlpha: 0.0,
   points: isMobile ? 8.0 : 15.0,
   maxDistance: isMobile ? 10.0 : 20.0,
   spacing: isMobile ? 20.0 : 15.0,
 })
-
-
-
-
