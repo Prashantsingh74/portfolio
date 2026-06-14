@@ -111,13 +111,17 @@ button {
 .image-container {
   position: relative;
   display: inline-block;
-  align-self: center;
+  /* align-self: center; */
 }
 
 .image-container img {
   display: block;
   max-width: 100%;
-  height: auto;
+  height: 100%;
+}
+
+.about-img {
+  height: auto !important;
 }
 
 .image-blur {
