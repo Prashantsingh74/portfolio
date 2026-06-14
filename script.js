@@ -66,8 +66,17 @@ document.querySelectorAll('.mobile-menu a').forEach(link => {
   });
 });
 
+// function showContact() {
+//   alert("Please contact me on (+91-8084008752 or prashant.kumar.singh1297@gmail.com) to request my CV.");
+// }
+
 function showContact() {
-  alert("Please contact me on (+91-8084008752 or prashant.kumar.singh1297@gmail.com) to request my CV.");
+    const link = document.createElement("a");
+    link.href = "./images/Prashant~Kumar.pdf"; // Path to your resume PDF
+    link.download = "Prashant Kumar Resume.pdf";
+    document.body.appendChild(link);
+    link.click();
+    document.body.removeChild(link);
 }
 
 // Vanta.js background effect
